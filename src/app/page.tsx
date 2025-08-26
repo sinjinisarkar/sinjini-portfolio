@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Link as LinkIcon, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
 
 // ===== Helper components (typed so TS doesn't complain)
 type SectionProps = {
@@ -34,20 +36,19 @@ const TagRow: React.FC<TagRowProps> = ({ items = [] }) => (
 // ===== Content (edit me!)
 const ME = {
   name: "Sinjini Sarkar",
-  title: "Computer Science with AI — UI/UX + Cloud",
+  title: "Computer Science with AI",
   blurb:
-    "Designing clear user flows for internal tools and dashboards. Bonus: cloud + Python so I speak developer too.",
-  location: "UK — London/Leeds (remote-friendly)",
+    "I design the flow, code the logic and make the cloud do the heavy lifting.",
+  location: "UK — Milton Keynes/Leeds (remote-friendly)",
   email: "sinjini.brampton@gmail.com",
   github: "https://github.com/sinjinisarkar",
   linkedin: "https://www.linkedin.com/in/sinjini-sarkar",
-  portfolio: "#",
 };
 
 const SKILLS = [
-  { group: "Design", items: ["User flows", "Wireframing", "Low/High‑fi prototyping", "Usability testing", "Accessibility basics"] },
+  { group: "Design", items: ["User flows", "Wireframing", "Usability testing", "Accessibility basics"] },
   { group: "Tools", items: ["Figma", "Canva", "iPad design apps", "GitHub Wiki/Markdown"] },
-  { group: "Web", items: ["HTML", "CSS", "Basic JavaScript", "Flask/Jinja2"] },
+  { group: "Web", items: ["HTML", "CSS", "JavaScript", "Flask"] },
   { group: "Systems & Cloud", items: ["Python", "SQL", "AWS (CCP, AI Practitioner)", "CI/CD (GitHub Actions)", "Linux (bash)"] },
   { group: "AI/ML", items: ["Naive Bayes", "SVM", "Random Forest", "TF‑IDF", "Model eval (P/R/F1, ROC‑AUC)"] },
   { group: "Soft Skills", items: ["Agile teamwork", "GitHub project boards", "Public speaking (Toastmasters)", "Tutoring/teaching"] },
@@ -70,7 +71,7 @@ const PROJECTS = [
     ],
   },
   {
-    title: "Cloud E‑commerce — Storefront & Checkout UX",
+    title: "Cloud E‑commerce",
     period: "Nov–Dec 2024",
     summary:
       "Developed responsive storefront and refined checkout; validated mobile/desktop behaviour; documented deploy/rollback.",
@@ -79,7 +80,10 @@ const PROJECTS = [
       "Repeatable deployment steps (Flask on AWS/PythonAnywhere)",
       "Responsive testing across common breakpoints",
     ],
-    links: [],
+    links: [
+      { label: "Repo", href: "https://github.com/sinjinisarkar/NakshiKantha_comp2011" },
+      { label: "Live Site", href: "https://ssinjini2611.pythonanywhere.com/" }
+    ],
   },
   {
     title: "Phishing Detector — Data UX for results",
@@ -90,22 +94,40 @@ const PROJECTS = [
       "Tables/plots for precision, recall, F1, ROC‑AUC",
       "Recommendations on model trade‑offs (accuracy vs interpretability)",
     ],
-    links: [],
+    links: [
+      { label: "Read Report", href: "https://1drv.ms/b/c/c048f9979257834b/EUkhOXky6RlPjXVUjxLwTegBApTV2o2MPufOmxj4kH1PDQ?e=bZHFIj" }
+
+    ],
   },
   {
-    title: "Unix Shell in C — DX & reliability",
+    title: "Unix Shell in C",
     period: "Oct–Nov 2024",
     summary:
       "Created a Unix‑style shell; added defensive error handling & a concise test checklist to improve developer experience.",
     bullets: ["Parsing, piping, redirection; known‑issues doc & test steps"],
-    links: [],
+    links: [
+      { label: "Repo", href: "https://github.com/sinjinisarkar/xv6_simpleshell" }
+    ],
   },
 ];
 
 const CERTS = [
-  { name: "AWS Certified AI Practitioner", when: "Aug 2025", note: "Bedrock, SageMaker, Rekognition; responsible AI" },
-  { name: "AWS Certified Cloud Practitioner (CLF‑C02)", when: "Apr 2025", note: "EC2, S3, IAM, CloudWatch; security & resilient design" },
+  { 
+    name: "AWS Certified AI Practitioner", 
+    when: "Aug 2025", 
+    note: "Bedrock, SageMaker, Rekognition; responsible AI",
+    badge: "/aws-ai.png", 
+    link: "https://www.credly.com/earner/earned/badge/9d64f958-5427-4094-b3a4-b02d7a8e3caf"
+  },
+  { 
+    name: "AWS Certified Cloud Practitioner (CLF-C02)", 
+    when: "Apr 2025", 
+    note: "EC2, S3, IAM, CloudWatch; security & resilient design",
+    badge: "/aws-ccp.png",
+    link: "https://www.credly.com/earner/earned/badge/0286a652-6d34-4e21-9c19-af2a7a62924f"
+  },
 ];
+
 
 // ===== Page
 export default function Portfolio() {
@@ -117,6 +139,12 @@ export default function Portfolio() {
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">{ME.name}</h1>
           <p className="mt-2 text-lg text-gray-700">{ME.title}</p>
           <p className="mt-3 max-w-3xl text-gray-600">{ME.blurb}</p>
+          <p className="mt-4 flex items-center gap-2 text-gray-500 text-sm">
+            <span>📍 Milton Keynes / Leeds</span>
+            <span className="text-gray-400">|</span>
+            <span>🌍 Remote-friendly</span>
+          </p>
+
           <div className="mt-4 flex flex-wrap gap-3">
             <a href={`mailto:${ME.email}`} className="inline-flex items-center gap-2 text-sm underline hover:no-underline"><Mail size={16}/> {ME.email}</a>
             <a href={ME.github} className="inline-flex items-center gap-2 text-sm underline hover:no-underline" target="_blank" rel="noreferrer"><Github size={16}/> GitHub</a>
@@ -130,12 +158,16 @@ export default function Portfolio() {
         <Card className="rounded-2xl">
           <CardContent className="pt-4 text-sm text-gray-700 space-y-3">
             <p>
-              BSc Computer Science with Artificial Intelligence, University of Leeds — First‑Class trajectory. I enjoy designing
-              usable internal tools and collaborating closely with engineers.
+              I am a Computer Science student at the University of Leeds, specialising in Artificial Intelligence and Cloud Computing. I have recently achieved the AWS Certified Cloud Practitioner and AWS Certified AI Practitioner certifications, which reflect my passion for building reliable, scalable systems that also integrate AI.
             </p>
             <p>
-              Recent highlights: led UI/UX flows for a ride‑sharing app (multi‑sprint wireframes, QA‑driven iteration), refined
-              a cloud storefront checkout, and presented ML results with clear, decision‑ready visuals.
+              I have applied these skills through academic and group projects, including designing UI/UX flows and building a full-stack ride-sharing web app, developing a cloud-hosted e-commerce platform, and creating a phishing detection system using machine learning models such as Naive Bayes and SVM. These experiences taught me how to balance usability, technical implementation, and performance.
+            </p>
+            <p>
+              Beyond my degree, I am an active learner with strong communication skills. Through Toastmasters, I have built confidence in public speaking, and through tutoring/mentoring, I have developed the ability to explain technical ideas clearly.
+            </p>
+            <p>
+              Looking ahead, I am keen to apply my skills in AI, cloud, and software engineering within professional settings where I can continue to grow, contribute, and learn from industry experts.
             </p>
           </CardContent>
         </Card>
@@ -154,7 +186,7 @@ export default function Portfolio() {
       </Section>
 
       {/* Projects */}
-      <Section id="projects" title="Selected Projects">
+      <Section id="projects" title="Technical Projects">
         <div className="grid md:grid-cols-2 gap-6">
           {PROJECTS.map((p) => (
             <motion.div key={p.title} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.35 }}>
@@ -190,8 +222,21 @@ export default function Portfolio() {
           {CERTS.map((c) => (
             <Card key={c.name} className="rounded-2xl">
               <CardHeader className="pb-2">
-                <CardTitle className="text-base">{c.name}</CardTitle>
+                <div className="flex items-center gap-3">
+                  {c.badge ? (
+                    <a href={c.link} target="_blank" rel="noreferrer" className="shrink-0">
+                      {/* Use next/image for optimization; falls back to <img> if you prefer */}
+                      <Image src={c.badge} alt={`${c.name} badge`} width={40} height={40} />
+                    </a>
+                  ) : null}
+                  <CardTitle className="text-base">
+                    <a href={c.link} target="_blank" rel="noreferrer" className="hover:underline">
+                      {c.name}
+                    </a>
+                  </CardTitle>
+                </div>
               </CardHeader>
+
               <CardContent className="pt-0 text-sm text-gray-700">
                 <p className="mb-1">{c.when}</p>
                 <p>{c.note}</p>
@@ -200,6 +245,7 @@ export default function Portfolio() {
           ))}
         </div>
       </Section>
+
 
 
       {/* Footer */}
