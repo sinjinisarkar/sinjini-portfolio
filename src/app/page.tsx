@@ -6,21 +6,30 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Link as LinkIcon, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
-// ===== Helper components
-const Section = ({ id, title, children }) => (
+// ===== Helper components (typed so TS doesn't complain)
+type SectionProps = {
+  id?: string;
+  title: string;
+  children: React.ReactNode;
+};
+const Section: React.FC<SectionProps> = ({ id, title, children }) => (
   <section id={id} className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-6">{title}</h2>
     {children}
   </section>
 );
 
-const TagRow = ({ items = [] }) => (
+type TagRowProps = {
+  items?: string[];
+};
+const TagRow: React.FC<TagRowProps> = ({ items = [] }) => (
   <div className="flex flex-wrap gap-2">
     {items.map((t) => (
       <Badge key={t} className="rounded-2xl px-3 py-1 text-sm">{t}</Badge>
     ))}
   </div>
 );
+
 
 // ===== Content (edit me!)
 const ME = {
