@@ -36,7 +36,7 @@ const TagRow: React.FC<TagRowProps> = ({ items = [] }) => (
 // ===== Content (edit me!)
 const ME = {
   name: "Sinjini Sarkar",
-  title: "Computer Science with AI",
+  title: "Computer Science with AI @ University of Leeds",
   blurb:
     "I design the flow, code the logic and make the cloud do the heavy lifting.",
   location: "UK — Milton Keynes/Leeds (remote-friendly)",
