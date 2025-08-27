@@ -117,14 +117,14 @@ const CERTS = [
     when: "Aug 2025", 
     note: "Bedrock, SageMaker, Rekognition; responsible AI",
     badge: "/aws-ai.png", 
-    link: "https://www.credly.com/earner/earned/badge/9d64f958-5427-4094-b3a4-b02d7a8e3caf"
+    link: "https://www.credly.com/badges/9d64f958-5427-4094-b3a4-b02d7a8e3caf/public_url"
   },
   { 
     name: "AWS Certified Cloud Practitioner (CLF-C02)", 
     when: "Apr 2025", 
     note: "EC2, S3, IAM, CloudWatch; security & resilient design",
     badge: "/aws-ccp.png",
-    link: "https://www.credly.com/earner/earned/badge/0286a652-6d34-4e21-9c19-af2a7a62924f"
+    link: "https://www.credly.com/badges/0286a652-6d34-4e21-9c19-af2a7a62924f/public_url"
   },
 ];
 
