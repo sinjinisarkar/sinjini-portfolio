@@ -111,7 +111,7 @@ const PROJECTS = [
   },
   {
     title: "Numerical Methods — Firework Trajectory",
-    period: "Sept 2025",
+    period: "Dec 2024",
     summary:
       "Applied Heun, SSPRK3, and Runge-Kutta solvers to model projectile motion with drag; compared accuracy, stability, and efficiency.",
     bullets: [
