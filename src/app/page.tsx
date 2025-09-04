@@ -109,6 +109,21 @@ const PROJECTS = [
       { label: "Repo", href: "https://github.com/sinjinisarkar/xv6_simpleshell" }
     ],
   },
+  {
+    title: "Numerical Methods — Firework Trajectory",
+    period: "Sept 2025",
+    summary:
+      "Applied Heun, SSPRK3, and Runge-Kutta solvers to model projectile motion with drag; compared accuracy, stability, and efficiency.",
+    bullets: [
+      "Implemented ODE solvers in Python (NumPy, Matplotlib, Pandas)",
+      "Error & convergence analysis across multiple time steps",
+      "Root-finding (Bisection, Secant) to compute required launch velocity",
+    ],
+    links: [
+      { label: "Repo", href: "https://github.com/sinjinisarkar/numerical-methods-visualization" },
+      { label: "View Report (PDF)", href: "https://github.com/sinjinisarkar/numerical-methods-visualization/blob/main/Final_coursework.pdf" }
+    ],
+  },
 ];
 
 const CERTS = [
