@@ -100,13 +100,17 @@ const PROJECTS = [
     ],
   },
   {
-    title: "Unix Shell in C",
-    period: "Oct–Nov 2024",
+    title: "AI Search Algorithms & Heuristics (Pair Project)",
+    period: "Feb 2025",
     summary:
-      "Created a Unix‑style shell; added defensive error handling & a concise test checklist to improve developer experience.",
-    bullets: ["Parsing, piping, redirection; known‑issues doc & test steps"],
+      "Implemented and benchmarked BFS, DFS, Best-First, and A* search on sliding puzzle and robot worker problems; tested heuristics for efficiency and scalability.",
+    bullets: [
+      "Designed and evaluated heuristics (Manhattan Distance, Blocking Obstacle, Combined) for performance improvements",
+      "Compared algorithms across easy/medium/hard cases, analysing execution time, path length, and node expansions",
+      "Documented trade-offs between search completeness, optimality, and computational cost"
+    ],
     links: [
-      { label: "Repo", href: "https://github.com/sinjinisarkar/xv6_simpleshell" }
+      { label: "Read Report (PDF)", href: "https://1drv.ms/b/c/c048f9979257834b/EclLU8oVgOVFmaV2etM74bcBgpss381B5guXDaqGsUdZ9g?e=HhfkpN" }
     ],
   },
   {
@@ -122,6 +126,16 @@ const PROJECTS = [
     links: [
       { label: "Repo", href: "https://github.com/sinjinisarkar/numerical-methods-visualization" },
       { label: "View Report (PDF)", href: "https://github.com/sinjinisarkar/numerical-methods-visualization/blob/main/Final_coursework.pdf" }
+    ],
+  },
+  {
+    title: "Unix Shell in C",
+    period: "Oct–Nov 2024",
+    summary:
+      "Created a Unix‑style shell; added defensive error handling & a concise test checklist to improve developer experience.",
+    bullets: ["Parsing, piping, redirection; known‑issues doc & test steps"],
+    links: [
+      { label: "Repo", href: "https://github.com/sinjinisarkar/xv6_simpleshell" }
     ],
   },
 ];
