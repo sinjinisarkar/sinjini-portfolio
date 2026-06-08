@@ -38,11 +38,12 @@ const ME = {
   name: "Sinjini Sarkar",
   title: "Computer Science with AI @ University of Leeds",
   blurb:
-    "I design the flow, code the logic and make the cloud do the heavy lifting.",
-  location: "UK — Milton Keynes/Leeds (remote-friendly)",
+    "Building intelligent systems with AI, cloud technologies, and data-driven solutions.",
+  location: "UK — Milton Keynes / Leeds",
   email: "sinjini.brampton@gmail.com",
   github: "https://github.com/sinjinisarkar",
   linkedin: "https://www.linkedin.com/in/sinjini-sarkar",
+
 };
 
 const SKILLS = [
@@ -56,88 +57,134 @@ const SKILLS = [
 
 const PROJECTS = [
   {
-    title: "CatchMyRide — UI/UX flows (Group Project)",
-    period: "Feb–Apr 2025",
+    title: "Fairness & Explainability in Machine Learning for Insurance Risk Prediction",
+    period: "Nov 2025 – Apr 2026",
     summary:
-      "Designed end‑to‑end flows for login, booking, payment, and dashboards; iterated across 4 sprints based on feedback & QA.",
+      "First Class final-year dissertation investigating fairness, explainability, and predictive performance of machine learning models for young driver collision severity prediction.",
     bullets: [
-      "Wireframes & user flows documented in GitHub Wiki",
-      "QA uncovered multiple issues (e.g., penalty logic, layout misalignment); raised issues and verified fixes",
-      "Implemented flows in Flask templates; cross‑device responsive checks",
+      "Compared multiple machine learning classifiers for high vs low collision severity prediction",
+      "Integrated fairness evaluation and Explainable AI techniques throughout the modelling pipeline",
+      "Analysed model transparency, bias considerations, and ethical implications of AI-driven decision making",
+      "Awarded First Class grade (76%)"
     ],
     links: [
-      { label: "GitHub Wiki (UI Designs)", href: "https://github.com/COMP2913-24-25/software-engineering-project-team-19/wiki/UI-Designs" },
-      { label: "Repo", href: "https://github.com/COMP2913-24-25/software-engineering-project-team-19" },
-    ],
+      {
+        label: "Read Dissertation Report",
+        href: "https://github.com/sinjinisarkar/fyp-insurance-fairness-xai/blob/main/SARKAR26-FINAL.pdf"
+      },
+      {
+        label: "Repo",
+        href: "https://github.com/sinjinisarkar/fyp-insurance-fairness-xai"
+      }
+    ]
   },
+
   {
-    title: "Cloud E‑commerce",
-    period: "Nov–Dec 2024",
-    summary:
-      "Developed responsive storefront and refined checkout; validated mobile/desktop behaviour; documented deploy/rollback.",
-    bullets: [
-      "Reduced friction via clearer error states & form labels",
-      "Repeatable deployment steps (Flask on AWS/PythonAnywhere)",
-      "Responsive testing across common breakpoints",
-    ],
-    links: [
-      { label: "Repo", href: "https://github.com/sinjinisarkar/NakshiKantha_comp2011" },
-      { label: "Live Site", href: "https://ssinjini2611.pythonanywhere.com/" }
-    ],
-  },
-  {
-    title: "Phishing Detector — Data UX for results",
+    title: "Phishing Email Detection using Machine Learning",
     period: "Mar–Apr 2025",
     summary:
-      "Built TF‑IDF pipeline with classical models; presented metrics clearly for non‑ML readers; 90.2% accuracy.",
+      "Built a phishing email detection system using TF-IDF and machine learning models, achieving 90.2% classification accuracy.",
     bullets: [
-      "Tables/plots for precision, recall, F1, ROC‑AUC",
-      "Recommendations on model trade‑offs (accuracy vs interpretability)",
+      "Implemented and evaluated Naive Bayes, SVM, and Random Forest classifiers",
+      "Used TF-IDF feature extraction for text preprocessing and classification",
+      "Analysed Precision, Recall, F1-Score, and ROC-AUC metrics",
+      "Compared model performance and interpretability trade-offs"
     ],
     links: [
-      { label: "Read Report", href: "https://1drv.ms/b/c/c048f9979257834b/EUkhOXky6RlPjXVUjxLwTegBApTV2o2MPufOmxj4kH1PDQ?e=bZHFIj" }
-
-    ],
+      {
+        label: "Read Report",
+        href: "https://1drv.ms/b/c/c048f9979257834b/EUkhOXky6RlPjXVUjxLwTegBApTV2o2MPufOmxj4kH1PDQ?e=bZHFIj"
+      }
+    ]
   },
+
   {
-    title: "AI Search Algorithms & Heuristics (Pair Project)",
+    title: "AI Search Algorithms & Heuristics",
     period: "Feb 2025",
     summary:
-      "Implemented and benchmarked BFS, DFS, Best-First, and A* search on sliding puzzle and robot worker problems; tested heuristics for efficiency and scalability.",
+      "Implemented and benchmarked classical AI search algorithms across puzzle-solving and robotic planning problems.",
     bullets: [
-      "Designed and evaluated heuristics (Manhattan Distance, Blocking Obstacle, Combined) for performance improvements",
-      "Compared algorithms across easy/medium/hard cases, analysing execution time, path length, and node expansions",
-      "Documented trade-offs between search completeness, optimality, and computational cost"
+      "Implemented BFS, DFS, Best-First Search, and A* algorithms",
+      "Designed and evaluated heuristics including Manhattan Distance, Blocking Obstacle, and Combined heuristics",
+      "Compared execution time, path length, and node expansions across problem difficulties",
+      "Documented trade-offs between completeness, optimality, and computational efficiency"
     ],
     links: [
-      { label: "Read Report (PDF)", href: "https://1drv.ms/b/c/c048f9979257834b/EclLU8oVgOVFmaV2etM74bcBgpss381B5guXDaqGsUdZ9g?e=HhfkpN" }
-    ],
+      {
+        label: "Read Report (PDF)",
+        href: "https://1drv.ms/b/c/c048f9979257834b/EclLU8oVgOVFmaV2etM74bcBgpss381B5guXDaqGsUdZ9g?e=HhfkpN"
+      }
+    ]
   },
+
   {
-    title: "Numerical Methods — Firework Trajectory",
+    title: "CatchMyRide — Full Stack Ride Sharing Platform",
+    period: "Feb–Apr 2025",
+    summary:
+      "Contributed to a full-stack ride-sharing platform supporting ride publishing, booking, payments, and user dashboards.",
+    bullets: [
+      "Designed and documented user journeys and wireframes across multiple Agile sprints",
+      "Performed QA testing, issue reporting, and verification of bug fixes",
+      "Implemented Flask-based UI flows and responsive layouts",
+      "Collaborated within a 5-person Agile software engineering team"
+    ],
+    links: [
+      {
+        label: "GitHub Wiki",
+        href: "https://github.com/COMP2913-24-25/software-engineering-project-team-19/wiki/UI-Designs"
+      },
+      {
+        label: "Repo",
+        href: "https://github.com/COMP2913-24-25/software-engineering-project-team-19"
+      }
+    ]
+  },
+
+  {
+    title: "Cloud E-Commerce Platform",
+    period: "Nov–Dec 2024",
+    summary:
+      "Developed and deployed a cloud-hosted e-commerce application with responsive design and checkout functionality.",
+    bullets: [
+      "Built frontend and backend functionality using Flask",
+      "Improved usability through enhanced validation and error handling",
+      "Documented deployment, rollback, and maintenance procedures",
+      "Tested responsiveness across mobile and desktop environments"
+    ],
+    links: [
+      {
+        label: "Repo",
+        href: "https://github.com/sinjinisarkar/NakshiKantha_comp2011"
+      },
+      {
+        label: "Live Site",
+        href: "https://ssinjini2611.pythonanywhere.com/"
+      }
+    ]
+  },
+
+  {
+    title: "Numerical Methods — Firework Trajectory Simulation",
     period: "Dec 2024",
     summary:
-      "Applied Heun, SSPRK3, and Runge-Kutta solvers to model projectile motion with drag; compared accuracy, stability, and efficiency.",
+      "Modelled projectile motion with drag using numerical methods and analysed accuracy, stability, and convergence.",
     bullets: [
-      "Implemented ODE solvers in Python (NumPy, Matplotlib, Pandas)",
-      "Error & convergence analysis across multiple time steps",
-      "Root-finding (Bisection, Secant) to compute required launch velocity",
+      "Implemented Heun, SSPRK3, and Runge-Kutta methods in Python",
+      "Performed error and convergence analysis across multiple time steps",
+      "Applied root-finding techniques including Bisection and Secant methods",
+      "Visualised simulation results using NumPy, Pandas, and Matplotlib"
     ],
     links: [
-      { label: "Repo", href: "https://github.com/sinjinisarkar/numerical-methods-visualization" },
-      { label: "View Report (PDF)", href: "https://github.com/sinjinisarkar/numerical-methods-visualization/blob/main/Final_coursework.pdf" }
-    ],
-  },
-  {
-    title: "Unix Shell in C",
-    period: "Oct–Nov 2024",
-    summary:
-      "Created a Unix‑style shell; added defensive error handling & a concise test checklist to improve developer experience.",
-    bullets: ["Parsing, piping, redirection; known‑issues doc & test steps"],
-    links: [
-      { label: "Repo", href: "https://github.com/sinjinisarkar/xv6_simpleshell" }
-    ],
-  },
+      {
+        label: "Repo",
+        href: "https://github.com/sinjinisarkar/numerical-methods-visualization"
+      },
+      {
+        label: "View Report",
+        href: "https://github.com/sinjinisarkar/numerical-methods-visualization/blob/main/Final_coursework.pdf"
+      }
+    ]
+  }
 ];
 
 const CERTS = [
@@ -157,6 +204,19 @@ const CERTS = [
   },
 ];
 
+const EXPERIENCE = [
+  {
+    role: "Data Science & AI Industrial Placement",
+    company: "Lloyds Banking Group",
+    period: "June 2026 – June 2027",
+    location: "Leeds, United Kingdom",
+    bullets: [
+      "Incoming placement student focusing on data analytics, market insight, and AI-driven decision making.",
+      "Expected to work with large-scale data, machine learning concepts, and analytics to support business decisions in financial services.",
+      "Keen to develop skills in Google Cloud, BigQuery, Vertex AI, MLOps, and responsible AI during the placement year.",
+    ],
+  },
+];
 
 // ===== Page
 export default function Portfolio() {
@@ -186,20 +246,51 @@ export default function Portfolio() {
       <Section id="about" title="About">
         <Card className="rounded-2xl">
           <CardContent className="pt-4 text-sm text-gray-700 space-y-3">
-            <p>
-              I am a Computer Science student at the University of Leeds, specialising in Artificial Intelligence and Cloud Computing. I have recently achieved the AWS Certified Cloud Practitioner and AWS Certified AI Practitioner certifications, which reflect my passion for building reliable, scalable systems that also integrate AI.
-            </p>
-            <p>
-              I have applied these skills through academic and group projects, including designing UI/UX flows and building a full-stack ride-sharing web app, developing a cloud-hosted e-commerce platform, and creating a phishing detection system using machine learning models such as Naive Bayes and SVM. These experiences taught me how to balance usability, technical implementation, and performance.
-            </p>
-            <p>
-              Beyond my degree, I am an active learner with strong communication skills. Through Toastmasters, I have built confidence in public speaking, and through tutoring/mentoring, I have developed the ability to explain technical ideas clearly.
-            </p>
-            <p>
-              Looking ahead, I am keen to apply my skills in AI, cloud, and software engineering within professional settings where I can continue to grow, contribute, and learn from industry experts.
-            </p>
+           <p>
+            I am a Computer Science with Artificial Intelligence student at the University of Leeds with a strong interest in Data Science, Artificial Intelligence, Cloud Computing, and Analytics. I enjoy transforming data into meaningful insights and building intelligent systems that solve real-world problems.
+          </p>
+
+          <p>
+            Throughout my degree, I have developed experience across machine learning, cloud technologies, software engineering, and data analysis. My projects have included developing a phishing email detection system using machine learning, building cloud-hosted web applications, implementing AI search algorithms, and analysing complex datasets to support data-driven decision making.
+          </p>
+
+          <p>
+            I hold both the AWS Certified Cloud Practitioner and AWS Certified AI Practitioner certifications, which have strengthened my understanding of cloud infrastructure, machine learning workflows, generative AI, and responsible AI practices. I am particularly interested in how AI and analytics can be applied at scale to improve business outcomes and customer experiences.
+          </p>
+
+          <p>
+            Alongside my technical development, I have built strong communication and collaboration skills through tutoring, mentoring, group projects, and public speaking. These experiences have taught me how to explain complex technical concepts clearly and work effectively within diverse teams.
+          </p>
+
+          <p>
+            I will be joining Lloyds Banking Group as a Data Science & AI Industrial Placement Student, where I am excited to further develop my skills in analytics, machine learning, cloud technologies, and AI-driven decision making while contributing to business challenges within financial services.
+          </p>
           </CardContent>
         </Card>
+      </Section>
+
+      {/* Experience */}
+      <Section id="experience" title="Experience">
+        <div className="grid gap-4">
+          {EXPERIENCE.map((e) => (
+            <Card key={e.company} className="rounded-2xl">
+              <CardHeader>
+                <CardTitle className="text-lg">{e.role}</CardTitle>
+                <p className="text-sm text-gray-600">{e.company}</p>
+                <p className="text-sm text-gray-500">
+                  {e.period} · {e.location}
+                </p>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-1">
+                  {e.bullets.map((b, i) => (
+                    <li key={i} className="text-sm text-gray-700">{b}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </Section>
 
       {/* Skills */}
