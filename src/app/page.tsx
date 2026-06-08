@@ -229,9 +229,7 @@ export default function Portfolio() {
           <p className="mt-2 text-lg text-gray-700">{ME.title}</p>
           <p className="mt-3 max-w-3xl text-gray-600">{ME.blurb}</p>
           <p className="mt-4 flex items-center gap-2 text-gray-500 text-sm">
-            <span>📍 Milton Keynes / Leeds</span>
-            <span className="text-gray-400">|</span>
-            <span>🌍 Remote-friendly</span>
+            <span>Milton Keynes / Leeds</span>
           </p>
 
           <div className="mt-4 flex flex-wrap gap-3">
